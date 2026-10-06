@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "grid",
+    "road_network",
+    "scenario"
+  ],
+  "properties": {
+    "grid": {
+      "type": "object"
+    },
+    "road_network": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "speed",
+          "tunnel"
+        ],
+        "properties": {
+          "speed": {
+            "type": "number",
+            "minimum": 0
+          },
+          "tunnel": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "scenario": {
+      "type": "object",
+      "required": [
+        "bycicle percentage",
+        "evehicle percentage",
+        "day type",
+        "time slots"
+      ],
+      "properties": {
+        "bycicle percentage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "evehicle percentage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "day type": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "time slots": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}

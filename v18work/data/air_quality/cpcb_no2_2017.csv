@@ -1,0 +1,6 @@
+year,city,station,monitoring_days,no2_min_ug_m3,no2_max_ug_m3,no2_annual_avg_ug_m3,source
+2017,Chandigarh,Modern Foods Industrial Area,144,7,63,21,CPCB NAAQM 2017
+2017,Chandigarh,Sector-17 C,144,2,71,16,CPCB NAAQM 2017
+2017,Chandigarh,Punjab Engineering College Sector-12,138,4,50,14,CPCB NAAQM 2017
+2017,Chandigarh,Sector-39 IMTECH,145,3,52,16,CPCB NAAQM 2017
+2017,Chandigarh,Kaimbwala Village,144,3,40,14,CPCB NAAQM 2017

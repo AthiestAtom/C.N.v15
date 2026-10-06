@@ -1,0 +1,6 @@
+CITYNEXUS selected source components are reused from:
+destination-earth/DestinE_ESA_CityNexus
+Apache License 2.0.
+
+This package does not include the complete upstream repository. The selected
+files retain source attribution and are used as integration components.

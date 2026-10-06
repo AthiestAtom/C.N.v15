@@ -1,0 +1,38 @@
+city:
+  id: chandigarh
+  name: Chandigarh
+  country: India
+  region: Chandigarh
+  latitude: 30.7333
+  longitude: 76.7794
+
+model:
+  mode: remote
+  # endpoint, project and deployed city are runtime configuration, never fabricated.
+  timeout_seconds: 120
+
+simulation:
+  # No synthetic mobility/weather/traffic defaults are stored here.
+  # A scenario must provide its observed or explicitly user-selected inputs.
+
+kpis:
+  - travel_time
+  - vehicle_count
+  - congestion_index
+  - emissions_index
+  - affected_road_length
+
+interventions:
+  - id: bus_priority
+    name: Bus priority corridor
+  - id: traffic_signal_coordination
+    name: Traffic signal coordination
+  - id: low_emission_zone
+    name: Low-emission zone
+  - id: road_closure
+    name: Temporary road closure
+
+remote_sources:
+  roads_geojson: "https://webgis1.nic.in/nicstreet/rest/services/roadnetwork/MapServer/6/query?where=1%3D1&outFields=*&returnGeometry=true&f=geojson&outSR=4326"
+  rainfall_2021_2025_csv: "https://nwdp.nwic.gov.in/dataset/04ec0ba5-0eb4-47b1-b1fa-119353470898/resource/d9e1ecd2-c28a-4f98-9cb6-d2b82cf8b02b/download/rainfall_tel_hr_bhakra_beas_management_board_chandigarh_pb_2021_2025.csv"
+  rainfall_2026_2030_csv: "https://nwdp.nwic.gov.in/dataset/04ec0ba5-0eb4-47b1-b1fa-119353470898/resource/923fceb6-2a96-4204-bef2-d8b1ad9a076c/download/rainfall_tel_hr_bhakra_beas_management_board_chandigarh_pb_2026_2030.csv"

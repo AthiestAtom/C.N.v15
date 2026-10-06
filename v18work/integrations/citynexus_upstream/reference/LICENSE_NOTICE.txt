@@ -1,0 +1,8 @@
+CITYNEXUS reference modules in this directory are derived from:
+Destination Earth / ESA CITYNEXUS
+Repository: destination-earth/DestinE_ESA_CityNexus
+License: Apache License 2.0
+
+These are selectively retained source-derived reference modules. The
+Chandigarh application itself is not represented as the original CITYNEXUS
+repository and Chandigarh-specific data/modeling remains separate.

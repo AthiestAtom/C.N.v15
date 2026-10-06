@@ -1,0 +1,58 @@
+version: 1
+city: Chandigarh
+policy: No fabricated observations. External datasets are only used with provenance and are never relabelled as live measurements.
+sources:
+  municipal_gis:
+    name: India Geodata / DataMeet Chandigarh municipal spatial data
+    url: https://github.com/yashveeeeeer/india-geodata
+    files:
+      - Chandigarh_Boundary.geojson
+      - Chandigarh_Sectors.geojson
+      - Chandigarh_Wards.geojson
+    license: India Open Government License / source DataMeet CC BY-SA 2.5 India
+    role: city_boundary, sector_zones, wards
+  healthcare:
+    name: NIC HealthGIS public health facilities
+    url: https://github.com/yashveeeeeer/india-geodata
+    release: healthcare/facilities
+    file: INDIA_HEALTH_FACILITIES_NIC.geojson
+    license: India Open Government License
+    role: emergency_facilities
+  rainfall_2021_2025:
+    name: Punjab Surface Water Department / NWIC Chandigarh telemetry rainfall
+    url: https://nwdp.nwic.gov.in/en/dataset/rainfall-telemetry-hourly-punjab-surface-water-department
+    download: https://nwdp.nwic.gov.in/dataset/83507a8e-ffc0-46d9-b041-f109248a1f79/resource/8964fc68-3716-4422-a031-14ad16e21f91/download/rainfall_tel_hr_punjab_sw_ch_2021_2025.csv
+    format: csv
+    role: historical_rainfall, flood_calibration
+  rainfall_2026_2030:
+    name: Punjab Surface Water Department / NWIC Chandigarh telemetry rainfall
+    url: https://nwdp.nwic.gov.in/en/dataset/rainfall-telemetry-hourly-punjab-surface-water-department
+    download: https://nwdp.nwic.gov.in/dataset/83507a8e-ffc0-46d9-b041-f109248a1f79/resource/033c0be0-e8a6-44cc-ba6e-e927d6184e47/download/rainfall_tel_hr_punjab_sw_ch_2026_2030.csv
+    format: csv
+    role: current_and_future_feed_reference
+  chetna_road:
+    name: CHETNA-Road
+    doi: https://doi.org/10.6084/m9.figshare.28330067
+    code: https://github.com/rohithteja/CHETNA-ROAD
+    year: 2021
+    resolution: 500m_daily
+    city: Chandigarh
+    format: netcdf
+    pollutants: [CO2, NOx, PM2.5, PM10, CO, VOC, CH4, N2O, NH3, Pb, BC]
+    role: road_emission_baseline, emission_calibration
+    warning: Research dataset; not live observations and not a replacement for CPCB station measurements.
+  cpcb_aqi:
+    name: CPCB OGD real-time AQI
+    url: https://www.data.gov.in/resource/real-time-air-quality-index-various-locations
+    api_resource: 3b01bcb8-0b14-4abf-b6f2-c1bfd384ba69
+    role: live_air_quality
+    credential: DATA_GOV_IN_API_KEY required
+  osm:
+    name: OpenStreetMap via Overpass
+    url: https://www.openstreetmap.org/
+    role: road_network
+    license: ODbL
+  nic_roads:
+    name: NIC Chandigarh roadnetwork GIS
+    url: https://webgis1.nic.in/nicstreet/rest/services/roadnetwork/MapServer/6
+    role: road_network_crosscheck

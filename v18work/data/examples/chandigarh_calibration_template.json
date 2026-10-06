@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "city": "chandigarh",
+  "purpose": "Calibration targets only. No synthetic traffic observations are included.",
+  "observations": [
+    {
+      "location_id": "junction_or_road_segment_id",
+      "date": "YYYY-MM-DD",
+      "time_window": "HH:MM-HH:MM",
+      "vehicle_count": null,
+      "mean_speed_kmh": null,
+      "source": "official_dataset_or_field_survey",
+      "source_reference": "replace_with_source_url_or_document_id"
+    }
+  ],
+  "notes": [
+    "Populate with measured Chandigarh observations before calibration.",
+    "Do not use planning projections as if they were observed traffic counts."
+  ]
+}

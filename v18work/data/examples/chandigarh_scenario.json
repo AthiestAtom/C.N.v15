@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "city": "chandigarh",
+  "purpose": "Input template only. Replace every null with acquired/observed or explicitly user-selected scenario input before execution.",
+  "day_type": null,
+  "time_slots": null,
+  "mobility": {
+    "bicycle_percentage": null,
+    "evehicle_percentage": null
+  },
+  "road_network": {},
+  "interventions": []
+}
