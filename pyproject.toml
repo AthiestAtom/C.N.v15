@@ -11,7 +11,7 @@ python = "^3.11"
 fastapi = "0.115.6"
 uvicorn = {extras = ["standard"], version = "^0.30"}
 fastapi-keycloak-middleware = "^1.1"
-geopandas = "^1.0.1"
+geopandas = "^1.1.2"
 shapely = "^2.0.5"
 numpy = "^2.1.2"
 jsonschema = "^4.23.0"

@@ -1,0 +1,11 @@
+.git
+.github
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.zip
+.pytest_cache
+.mypy_cache
+model_input
+model_output

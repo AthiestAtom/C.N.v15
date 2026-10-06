@@ -1,15 +1,15 @@
 import json
+import os
 from copy import deepcopy
 from pathlib import Path
 from typing import Any
 
 from mobility_model_api.model.generic import SimulationID
-from mobility_model_api.simulation.xai_record import XAIRecord, XAIRecordType
 
-MODEL_INPUT_BASE_PATH = Path("/model_input")
+MODEL_INPUT_BASE_PATH = Path(os.getenv("MODEL_INPUT_BASE_PATH", "/model_input"))
 
 
-def create_xai_records(model_input: dict[str, any], day_type: str, time_slot: int) -> list[XAIRecord]:
+def create_xai_records(model_input: dict[str, any], day_type: str, time_slot: int) -> list["XAIRecord"]:
     """
     Creates a full set of model inputs required by the XAI blackbox approach.
     The set contains a JSON input for each road_id with all modifications except that road_id.
@@ -18,6 +18,8 @@ def create_xai_records(model_input: dict[str, any], day_type: str, time_slot: in
     :param time_slot: The time slot of the simulation used in the XAI analysis.
     :return: A list of modified model inputs.
     """
+    from mobility_model_api.simulation.xai_record import XAIRecord, XAIRecordType
+
     return [
         XAIRecord(
             XAIRecordType.MODIFICATION,

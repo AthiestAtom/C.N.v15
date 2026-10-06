@@ -286,3 +286,71 @@ your-project/
 ---
 
 *Questions? Check CITYNEXUS_INTEGRATION_GUIDE.md for detailed context, or reference the official MODEL_DOCS.md for the mobility model's command-line interface.*
+
+---
+
+## Deployment setup (frontend + backend)
+
+### Frontend (GitHub Pages)
+
+- Static dashboard files live in `/web`.
+- Pages deployment workflow: `.github/workflows/pages.yml`
+- Expected project-site URL after Pages is enabled:
+  - `https://athiestatom.github.io/C.N.v15/`
+- The frontend uses relative asset paths (`./...`) so it works under the `/C.N.v15/` base path.
+
+#### Frontend API base URL configuration
+
+Set the backend URL in `web/config.js`:
+
+```js
+window.CITYNEXUS_CONFIG = {
+  apiBaseUrl: "https://your-backend.example.com"
+};
+```
+
+- Leave empty to disable API calls until backend is configured.
+- Do not hard-code localhost in production Pages deployments.
+
+### Backend (containerized API)
+
+- FastAPI entry point: `mobility_model_api/api/app.py`
+- Health endpoint: `GET /health`
+  - Returns `status: "degraded"` when `run_mobility_model` is missing.
+- Simulation endpoint: `POST /simulate`
+  - Preserves existing model input/output flow using existing adapters.
+
+Environment variables:
+
+- `MODEL_INPUT_BASE_PATH` (default `/model_input`)
+- `MODEL_OUTPUT_BASE_PATH` (default `/model_output`)
+- `MODEL_BIN_PATH` (default `/run_mobility_model`)
+- `HOST` (default `0.0.0.0`)
+- `PORT` (default `8000`)
+
+Container assets:
+
+- `Dockerfile`
+- `.dockerignore`
+- `requirements.txt`
+
+Workflow for build/test/publish to GHCR:
+
+- `.github/workflows/backend-container.yml`
+- On pull requests: validates and builds image without push.
+- On pushes to `main`: pushes to `ghcr.io/<owner>/<repo>/backend` when package permissions allow.
+
+### Live vs deployment-ready
+
+- **Live automatically after merge + repo settings**:
+  - Frontend on GitHub Pages (once Pages is enabled for GitHub Actions in repository settings).
+- **Deployment-ready but not guaranteed live yet**:
+  - Backend container build/publish workflow.
+  - Runtime hosting target for persistent API (e.g., Azure, AWS, Render, Fly.io, VPS) still requires one-time platform setup.
+
+### One-time manual setup still required
+
+1. Enable GitHub Pages source as **GitHub Actions** in repository settings.
+2. Choose and configure a persistent backend host.
+3. Provide `run_mobility_model` executable on that host/container image path and set `MODEL_BIN_PATH` if different.
+4. Set `web/config.js` `apiBaseUrl` to the deployed backend URL.
