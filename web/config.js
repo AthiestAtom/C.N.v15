@@ -1,3 +1,3 @@
 window.CITYNEXUS_CONFIG = {
-  apiBaseUrl: "",
+  apiBaseUrl: "https://citynexus-mobility-api.onrender.com",
 };
