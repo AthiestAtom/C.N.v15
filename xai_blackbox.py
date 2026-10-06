@@ -3,14 +3,14 @@ import logging
 import numpy as np
 from geopandas import GeoDataFrame
 
-from mobility_model_api.simulation.model_output import (
+from model_output import (
     TargetAreaType,
     filter_time_slot,
     get_target_area,
     load_as_geodf,
     load_result_zip,
 )
-from mobility_model_api.simulation.xai_record import XAIRecord
+from xai_record import XAIRecord
 
 XAI_DIFFERENCE_FILENAME = "xai_diffs.geojson"
 XAI_IMPACT_FILENAME = "xai_impact.geojson"

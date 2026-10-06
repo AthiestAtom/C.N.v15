@@ -193,6 +193,29 @@ Your KPI Dashboard
 
 5. **Done!** Results flow to your dashboard.
 
+## 🧑‍💻 Codespaces Bootstrap
+
+This repository now includes `.devcontainer/devcontainer.json` for Python 3.11 + Poetry setup.
+
+After Codespaces starts:
+
+1. Copy env defaults:
+   ```bash
+   cp .env.example .env
+   ```
+2. Create local model I/O folders:
+   ```bash
+   mkdir -p .local/model_input .local/model_output
+   ```
+3. Export runtime paths (or load from `.env` in your shell tooling):
+   ```bash
+   export MODEL_INPUT_BASE_PATH=.local/model_input
+   export MODEL_OUTPUT_BASE_PATH=.local/model_output
+   export MODEL_BIN_PATH=/workspaces/C.N.v15/run_mobility_model
+   ```
+
+> `run_mobility_model` is still not included in this repository. Place the executable at `MODEL_BIN_PATH` before end-to-end runs.
+
 ---
 
 ## 🎓 Key Concepts

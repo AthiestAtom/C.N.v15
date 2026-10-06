@@ -5,7 +5,7 @@ from typing import Optional
 
 from geopandas import GeoDataFrame
 
-from mobility_model_api.model.generic import SimulationID
+from generic import SimulationID
 
 
 class XAIRecordType(Enum):

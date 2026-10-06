@@ -11,12 +11,12 @@ from geopandas import GeoDataFrame
 from shapely import Polygon
 from shapely.geometry import box
 
-from mobility_model_api.model.generic import SimulationID
-from mobility_model_api.util.exceptions import InvalidAccessException, NoResultException
+from exceptions import InvalidAccessException, NoResultException
+from generic import SimulationID
 
 T = TypeVar("T")
 
-MODEL_OUTPUT_BASE_PATH = Path("/model_output")
+MODEL_OUTPUT_BASE_PATH = Path(os.getenv("MODEL_OUTPUT_BASE_PATH", "/model_output"))
 
 TargetAreaType = List[Tuple[Number, Number]]
 

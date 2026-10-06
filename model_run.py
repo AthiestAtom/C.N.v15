@@ -1,4 +1,5 @@
 import logging
+import os
 import shutil
 import subprocess
 from pathlib import Path
@@ -6,29 +7,29 @@ from typing import Any
 
 from geopandas import GeoDataFrame
 
-from mobility_model_api.model.generic import SimulationID
-from mobility_model_api.simulation.model_input import (
+from generic import SimulationID
+from model_input import (
     create_xai_records,
     derive_input_file_path,
     store_input_file,
 )
-from mobility_model_api.simulation.model_output import (
+from model_output import (
     TargetAreaType,
     derive_output_path,
     find_latest_file,
 )
-from mobility_model_api.simulation.xai_blackbox import (
+from xai_blackbox import (
     XAI_DIFFERENCE_FILENAME,
     XAI_IMPACT_FILENAME,
     calculate_modification_impact,
 )
-from mobility_model_api.simulation.xai_record import (
+from xai_record import (
     XAIException,
     XAIRecord,
     XAIRecordType,
 )
 
-MODEL_BIN_PATH = Path("/run_mobility_model")
+MODEL_BIN_PATH = Path(os.getenv("MODEL_BIN_PATH", "/run_mobility_model"))
 
 # TODO(AA): reduce max modifications of analyzed road segments to a reasonable number after testing phase
 MAX_MODIFICATIONS = 10**10
