@@ -1,12 +1,13 @@
 import json
+import os
 from copy import deepcopy
 from pathlib import Path
 from typing import Any
 
-from mobility_model_api.model.generic import SimulationID
-from mobility_model_api.simulation.xai_record import XAIRecord, XAIRecordType
+from generic import SimulationID
+from xai_record import XAIRecord, XAIRecordType
 
-MODEL_INPUT_BASE_PATH = Path("/model_input")
+MODEL_INPUT_BASE_PATH = Path(os.getenv("MODEL_INPUT_BASE_PATH", "/model_input"))
 
 
 def create_xai_records(model_input: dict[str, any], day_type: str, time_slot: int) -> list[XAIRecord]:

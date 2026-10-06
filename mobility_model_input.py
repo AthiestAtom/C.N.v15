@@ -2,7 +2,7 @@ from typing import Any, Optional
 
 from pydantic import BaseModel
 
-from mobility_model_api.model.generic import SimulationID
+from generic import SimulationID
 
 
 class XAIInput(BaseModel):
