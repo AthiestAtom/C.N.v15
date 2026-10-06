@@ -1,0 +1,22 @@
+{
+  "sources": [
+    {
+      "name": "sectors.geojson",
+      "status": "unavailable",
+      "url": "https://raw.githubusercontent.com/datameet/Municipal_Spatial_Data/master/Chandigarh/Chandigarh_Sectors.geojson",
+      "error": "HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /datameet/Municipal_Spatial_Data/master/Chandigarh/Chandigarh_Sectors.geojson (Caused by NameResolutionError(\"HTTPSConnection(host='raw.githubusercontent.com', port=443): Failed to resolve 'raw.githubusercontent.com' ([Errno -3] Temporary failure in name resolution)\"))"
+    },
+    {
+      "name": "wards.geojson",
+      "status": "unavailable",
+      "url": "https://raw.githubusercontent.com/datameet/Municipal_Spatial_Data/master/Chandigarh/Chandigarh_Wards.geojson",
+      "error": "HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /datameet/Municipal_Spatial_Data/master/Chandigarh/Chandigarh_Wards.geojson (Caused by NameResolutionError(\"HTTPSConnection(host='raw.githubusercontent.com', port=443): Failed to resolve 'raw.githubusercontent.com' ([Errno -3] Temporary failure in name resolution)\"))"
+    },
+    {
+      "name": "boundary.geojson",
+      "status": "unavailable",
+      "url": "https://raw.githubusercontent.com/datameet/Municipal_Spatial_Data/master/Chandigarh/Chandigarh_Boundary.geojson",
+      "error": "HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /datameet/Municipal_Spatial_Data/master/Chandigarh/Chandigarh_Boundary.geojson (Caused by NameResolutionError(\"HTTPSConnection(host='raw.githubusercontent.com', port=443): Failed to resolve 'raw.githubusercontent.com' ([Errno -3] Temporary failure in name resolution)\"))"
+    }
+  ]
+}

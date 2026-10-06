@@ -1,0 +1,13 @@
+{
+  "generated_at_utc": "2026-10-05T19:20:14.218082+00:00",
+  "sources": [
+    {
+      "name": "chandigarh_roads_nic_geojson",
+      "url": "https://webgis1.nic.in/nicstreet/rest/services/roadnetwork/MapServer/6/query?where=1%3D1&outFields=*&returnGeometry=true&f=geojson&outSR=4326",
+      "retrieved_at_utc": "2026-10-05T19:20:14.204179+00:00",
+      "status": "unavailable",
+      "path": "data/raw/remote/chandigarh_roads_nic_geojson.geojson",
+      "error": "URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
+    }
+  ]
+}

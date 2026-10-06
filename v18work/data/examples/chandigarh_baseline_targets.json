@@ -1,0 +1,21 @@
+{
+  "city": "Chandigarh",
+  "source": "Chandigarh Master Plan 2031 / RITES traffic survey references",
+  "purpose": "Calibration targets; replace with measured observations before claiming predictive accuracy.",
+  "known_corridors": [
+    "Madhya Marg",
+    "Udyog Path",
+    "Dakshin Marg",
+    "Himalaya Marg",
+    "Jan Marg",
+    "Purv Marg"
+  ],
+  "target_metrics": [
+    "volume",
+    "capacity",
+    "V/C ratio",
+    "speed-delay",
+    "intersection volume"
+  ],
+  "notes": "Use authoritative/current traffic observations for actual model calibration."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["model", "kpis", "rows"],
+  "properties": {
+    "model": {"type": "string"},
+    "files": {"type": "array", "items": {"type": "string"}},
+    "rows": {"type": "integer", "minimum": 0},
+    "kpis": {
+      "type": "object",
+      "additionalProperties": {"type": "number"}
+    }
+  }
+}

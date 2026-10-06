@@ -1,0 +1,28 @@
+# Registry/image references verified from the public CITYNEXUS repository.
+# These are references only. No credentials or downloaded image layers are stored here.
+production:
+  registry: registry-ct.prod.desp.space
+  mobility_model_api:
+    copenhagen: registry-ct.prod.desp.space/citynexus/mobility-model-api:0.0.10-cph
+    bologna: registry-ct.prod.desp.space/citynexus/mobility-model-api:0.0.10-blq
+    sevilla: registry-ct.prod.desp.space/citynexus/mobility-model-api:0.0.10-svq
+    aarhus: registry-ct.prod.desp.space/citynexus/mobility-model-api:0.0.10-aar
+
+development:
+  registry: registry-ct.dev.desp.space
+  mobility_model_api:
+    copenhagen: registry-ct.dev.desp.space/citynexus/mobility-model-api:0.0.11-cph
+    bologna: registry-ct.dev.desp.space/citynexus/mobility-model-api:0.0.11-blq
+    sevilla: registry-ct.dev.desp.space/citynexus/mobility-model-api:0.0.11-svq
+    aarhus: registry-ct.dev.desp.space/citynexus/mobility-model-api:0.0.11-aar
+
+ivv:
+  registry: registry-ct.ivv.desp.space
+  mobility_model_api:
+    copenhagen: registry-ct.ivv.desp.space/citynexus/mobility-model-api:0.0.11-cph
+    bologna: registry-ct.ivv.desp.space/citynexus/mobility-model-api:0.0.11-blq
+    sevilla: registry-ct.ivv.desp.space/citynexus/mobility-model-api:0.0.11-svq
+    aarhus: registry-ct.ivv.desp.space/citynexus/mobility-model-api:0.0.11-aar
+
+# The public repository does not publish the values of MOBILITY_MODEL_IMAGE_REPO
+# or the model-version CI variables. Do not invent them.

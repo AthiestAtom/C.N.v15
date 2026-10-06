@@ -1,0 +1,5 @@
+# Direct machine-readable endpoints. Runtime may fetch these URLs when network access is available.
+# No downloaded observations are bundled unless provenance and licensing are recorded.
+chandigarh_roads_nic_geojson: "https://webgis1.nic.in/nicstreet/rest/services/roadnetwork/MapServer/6/query?where=1%3D1&outFields=*&returnGeometry=true&f=geojson&outSR=4326"
+rainfall_chandigarh_bbmb_2021_2025_csv: "https://nwdp.nwic.gov.in/dataset/04ec0ba5-0eb4-47b1-b1fa-119353470898/resource/d9e1ecd2-c28a-4f98-9cb6-d2b82cf8b02b/download/rainfall_tel_hr_bhakra_beas_management_board_chandigarh_pb_2021_2025.csv"
+rainfall_chandigarh_bbmb_2026_2030_csv: "https://nwdp.nwic.gov.in/dataset/04ec0ba5-0eb4-47b1-b1fa-119353470898/resource/923fceb6-2a96-4204-bef2-d8b1ad9a076c/download/rainfall_tel_hr_bhakra_beas_management_board_chandigarh_pb_2026_2030.csv"

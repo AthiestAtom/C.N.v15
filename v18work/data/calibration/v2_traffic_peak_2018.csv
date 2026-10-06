@@ -1,0 +1,13 @@
+study_year,road,direction,period,pcu_per_hour,lanes,design_capacity_pcu_per_hour,vc_ratio,los,source
+2018,Madhya Marg,Towards PGI,Morning 09:00-10:00,2224,3,3600,0.6,C,MetroCount/Radar-Gun study
+2018,Madhya Marg,Towards PGI,Evening 18:00-19:00,2578,3,3600,0.7,D,MetroCount/Radar-Gun study
+2018,Madhya Marg,Towards Transport Chowk,Morning 09:00-10:00,2344,3,3600,0.7,D,MetroCount/Radar-Gun study
+2018,Madhya Marg,Towards Transport Chowk,Evening 12:00-13:00,2006,3,3600,0.6,C,MetroCount/Radar-Gun study
+2018,Purv Marg,Towards Tribune Chowk,Morning 09:00-10:00,2651,3,3600,0.7,D,MetroCount/Radar-Gun study
+2018,Purv Marg,Towards Tribune Chowk,Evening 12:00-13:00,2057,3,3600,0.6,C,MetroCount/Radar-Gun study
+2018,Purv Marg,Towards ISBT,Morning 11:00-12:00,1405,3,3600,0.4,B,MetroCount/Radar-Gun study
+2018,Purv Marg,Towards ISBT,Evening 17:00-18:00,1968,3,3600,0.5,C,MetroCount/Radar-Gun study
+2018,Udyog Path,Towards ISBT,Morning 09:00-10:00,2792,2,3000,0.9,E,MetroCount/Radar-Gun study
+2018,Udyog Path,Towards ISBT,Evening 12:00-13:00,1621,2,3000,0.5,C,MetroCount/Radar-Gun study
+2018,Udyog Path,Towards UIET,Morning 09:00-10:00,1417,2,3000,0.5,C,MetroCount/Radar-Gun study
+2018,Udyog Path,Towards UIET,Evening 17:00-18:00,2046,2,3000,0.7,D,MetroCount/Radar-Gun study
