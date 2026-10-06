@@ -1,4 +1,5 @@
 import logging
+import os
 import shutil
 import subprocess
 from pathlib import Path
@@ -28,7 +29,7 @@ from mobility_model_api.simulation.xai_record import (
     XAIRecordType,
 )
 
-MODEL_BIN_PATH = Path("/run_mobility_model")
+MODEL_BIN_PATH = Path(os.getenv("MODEL_BIN_PATH", "/run_mobility_model"))
 
 # TODO(AA): reduce max modifications of analyzed road segments to a reasonable number after testing phase
 MAX_MODIFICATIONS = 10**10
