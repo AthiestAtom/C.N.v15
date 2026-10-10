@@ -1,0 +1,15 @@
+Repository: AthiestAtom/C.N.v15 (branch main)
+
+1) README_CHANDIGARH_DATA_READINESS.md
+   Upload destination: README_CHANDIGARH_DATA_READINESS.md (repository root)
+   This is a new documentation file; it does not replace the existing README.md.
+
+2) fetch_chandigarh_roads.py
+   Upload destination: scripts/fetch_chandigarh_roads.py
+   Create the scripts folder if it does not already exist.
+
+3) app.js
+   Upload destination: web/app.js
+   This is a replacement for the existing web/app.js. Review/replace that file, do not add a second app.js in the repository root.
+
+After uploading the script, run it from the repository root. It requires internet access and writes its fetched OpenStreetMap response under data/chandigarh_osm/. The script has not been run as part of preparing these files.
