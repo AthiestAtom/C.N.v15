@@ -7,8 +7,16 @@ from fastapi import FastAPI, HTTPException
 
 from mobility_model_api.model.mobility_model_input import MobilityModelInput
 from mobility_model_api.simulation.model_input import derive_input_file_path, store_input_file
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="CITYNEXUS Mobility Model API", version="0.1.14")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=False,
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["*"],
+)
 MODEL_BIN_PATH = Path(os.getenv("MODEL_BIN_PATH", "/run_mobility_model"))
 MODEL_OUTPUT_BASE_PATH = Path(os.getenv("MODEL_OUTPUT_BASE_PATH", "/model_output"))
 
